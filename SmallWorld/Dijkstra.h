@@ -29,13 +29,13 @@ double dist(Graph& graph, int start, int end,bool draw) {
 			heap->decreaseKey(node, -1, 0.0);
 		}
 	}
-	heap->print();
+	//heap->print();
 	//keep extracting min until the heap is empty
 	Node* extractedNode;
 	while (!heap->isEmpty())
 	{
 		extractedNode = heap->extractMin();
-		cout << "extracted " << extractedNode->dist <<" " << extractedNode->vertex << endl;
+		//cout << "extracted " << extractedNode->dist <<" " << extractedNode->vertex << endl;
 		Vertex& vertex = graph.vertexs[extractedNode->vertex];
 		for (auto edgeID = vertex.edges.begin(); edgeID != vertex.edges.end(); edgeID++) {
 			Edge& edge = graph.edges[*edgeID];
@@ -52,7 +52,7 @@ double dist(Graph& graph, int start, int end,bool draw) {
 	}
 	clock_t endTime = clock();
 
-	cout << "took " << endTime - startTime << "ms" <<endl;
+	//cout << "took " << endTime - startTime << "ms" <<endl;
 
 	if (draw) {
 		glClearColor(0.0, 0.0, 0.0, 0.0);

@@ -59,11 +59,11 @@ public:
 
 	void draw() {
 		
-		glClearColor(0.0, 0.0, 0.0, 0.0);
+		glClearColor(1.0, 1.0, 1.0, 1.0);
 		glClear(GL_COLOR_BUFFER_BIT);
 		glPointSize(0.0f);
 		glBegin(GL_POINTS);
-		//glColor3f(0.0f, 0.0f, 0.0f);
+		glColor3f(0.0f, 0.0f,0.0f);
 		for (int i = 1; i <= maxVertexID; i++)
 			glVertex2d(radius * cos(i * 6.28 / maxVertexID), radius * sin(i * 6.28 / maxVertexID));
 		glEnd();
